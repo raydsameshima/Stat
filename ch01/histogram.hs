@@ -1,3 +1,4 @@
+-- https://stackoverflow.com/a/48212667 
 import qualified Statistics.Sample.Histogram as S
 import qualified Data.Vector as V
 

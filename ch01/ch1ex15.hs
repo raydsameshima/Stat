@@ -1,22 +1,21 @@
--- ex 1.13 (1.2, 1.17)
+-- ex 1.15 (1.4, 1.17)
 
 import Statistics.Sample.Histogram (histogram)
 import Statistics.Sample (mean, varianceUnbiased, stdDev, range)
 import qualified Data.Vector as V
 
--- Average wind speeds for 45 us cities:
+-- Top 40 stocks on the Over-The-Counter marked:
 samples :: V.Vector Double
 samples = V.fromList 
-  [ 8.9,12.4, 8.6,11.3, 9.2, 8.8,35.1, 6.2, 7.0
-  , 7.1,11.8,10.7, 7.6, 9.1, 9.2, 8.2, 9.0, 8.7
-  , 9.1,10.9,10.3, 9.6, 7.8,11.5, 9.3, 7.9, 8.8
-  , 8.8,12.7, 8.4, 7.8, 5.7,10.5,10.5, 9.6, 8.9
-  ,10.2,10.3, 7.7,10.6, 8.3, 8.8, 9.5, 8.8, 9.4
+  [ 11.88,  6.27,  5.49,  4.81,  4.40,  3.78,  3.44,  3.11,  2.88,  2.68
+  ,  7.99,  6.07,  5.26,  4.79,  4.05,  3.69,  3.36,  3.03,  2.74,  2.63
+  ,  7.15,  5.98,  5.07,  4.55,  3.94,  3.62,  3.26,  2.99,  2.74,  2.62
+  ,  7.13,  5.91,  4.94,  4.43,  3.93,  3.48,  3.20,  2.89,  2.69,  2.61
   ]
 
 -- 1.2 histogram
 hist :: (V.Vector Double, V.Vector Int)
-hist = histogram 20 samples
+hist = histogram 15 samples
 
 main :: IO ()
 main = do
@@ -31,7 +30,7 @@ main = do
 
   let f k =
        V.length . V.filter (\x -> (av-k*sd)<x && x< (av+k*sd)) $ samples
-  print "Our sample size is 45:"
+  print "Our sample size is 40:"
   print $ V.length samples
   print "Within one sigma:"
   print $ f 1

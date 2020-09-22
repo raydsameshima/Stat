@@ -5,7 +5,9 @@ some stat. memo
 * Mathematical Statistics with Applications (7th Edition)
   (Wackerly, Mendenhall, Scheaffer)
 
+
 ## Chapter Memo
+
 ### Ch.1 What is Statistics
 
 The following function:

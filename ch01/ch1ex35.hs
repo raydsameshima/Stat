@@ -17,13 +17,13 @@ hist :: (V.Vector Double, V.Vector Int)
 hist = histogram 8 samples
 
 main = do
-  putStrLn $ "the range/4: " <> show (range samples / 4)
+  putStrLn $ "the range/4:            " <> show (range samples / 4)
 
   let av = mean samples
       sd = stdDev samples
 
   putStrLn $ "the standard deviation: " <> show sd
-  putStrLn $ "the mean value: " <> show av
+  putStrLn $ "the mean value:         " <> show av
 
   let (bins, hs) = hist
   print bins

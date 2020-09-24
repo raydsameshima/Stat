@@ -1,8 +1,10 @@
 -- ex 1.13 (1.2, 1.17)
 
+import Data.Monoid ((<>))
+import qualified Data.Vector as V
+
 import Statistics.Sample.Histogram (histogram)
 import Statistics.Sample (mean, varianceUnbiased, stdDev, range)
-import qualified Data.Vector as V
 
 -- Average wind speeds for 45 us cities:
 samples :: V.Vector Double
@@ -21,25 +23,19 @@ hist = histogram 20 samples
 main :: IO ()
 main = do
   let (lowerBs, hs) = hist
-  print lowerBs
-  print hs
+  putStrLn $ "The lower bounds: " <> show lowerBs
+  putStrLn $ "The histogram: " <> show hs
+
   let av = mean samples
       sd = stdDev samples
-  print "The average speed and the standard deviation are:"
-  print av
-  print sd
+  putStrLn $ "The average value is: " <> show av <> " and the standard deviation is: " <> show sd
 
   let f k =
        V.length . V.filter (\x -> (av-k*sd)<x && x< (av+k*sd)) $ samples
-  print "Our sample size is 45:"
-  print $ V.length samples
-  print "Within one sigma:"
-  print $ f 1
-  print "Within two sigma:"
-  print $ f 2
-  print "Within three sigma:"
-  print $ f 3
+  putStrLn $ "Our sample size is: " <> show (V.length samples)
+  putStrLn $ "Within one sigma:   " <> show (f 1)
+  putStrLn $ "Within two sigma:   " <> show (f 2)
+  putStrLn $ "Within three sigma: " <> show (f 3)
 
-  print "range/4 is:"
-  print $ (range samples / 4) 
-
+  putStrLn $ "range/4 is:           " <> show (range samples / 4) 
+  putStrLn $ "The average value is: " <> show av

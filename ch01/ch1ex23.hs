@@ -1,5 +1,7 @@
 -- ch1 ex.1.23
 
+import Data.Monoid ((<>))
+
 import Statistics.Distribution.Normal 
 import qualified Statistics.Distribution as S
 
@@ -9,19 +11,17 @@ normalD = normalDistr mean stdD
     mean = 75
     stdD = 20
 
-
 main :: IO () 
 main = do
-  print "the ratio of longer than 95 second:"
-  -- the ratio greater than 95 sec:
-  print $ S.complCumulative normalD 95
+  -- ratio greater than 95 sec:
+  putStrLn $ "the ratio of longer than 95 second: " 
+          <> show (S.complCumulative normalD 95)
+  
+  putStrLn $ "Between 35 sec and 115 sec:         " 
+          <> show ((S.complCumulative normalD 35) - (S.complCumulative normalD 115))
 
-  print "Between 35 sec and 115 sec:"
-  print $ (S.complCumulative normalD 35) - (S.complCumulative normalD 115)
-  print $ (S.cumulative normalD 115) - (S.cumulative normalD 35)
-
-  print "more than 2 min:" 
-  print $ S.complCumulative normalD 120
+  putStrLn $ "more than 2 min:                    " 
+          <> show (S.complCumulative normalD 120)
   
 
 

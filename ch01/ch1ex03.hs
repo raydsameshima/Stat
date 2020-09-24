@@ -1,8 +1,10 @@
 -- ch1 ex. 1.3
 
+import Data.Monoid ((<>))
+import qualified Data.Vector as V
+
 import Statistics.Sample.Histogram (histogram)
 import Statistics.Sample (mean, varianceUnbiased, stdDev, range)
-import qualified Data.Vector as V
 
 -- uranium 258 in soil (picocuries per gram)
 samples :: V.Vector Double
@@ -18,20 +20,17 @@ hist :: (V.Vector Double, V.Vector Int)
 hist = histogram 8 samples
 
 
-
 main :: IO ()
 main = do
   let (lowerBs, hs) = hist
-  print lowerBs
-  print hs
+  putStrLn $ "The lower bounds for each bin: " <> show lowerBs
+  putStrLn $ "The histogram is: " <> show hs
+
   let av = mean samples
       sd = stdDev samples
-  print "The average speed and the standard deviation are:"
-  print av
-  print sd
+  putStrLn $ "The average value is: " <> show av <> "and the standard deviation is: " <> show sd
 
-  print "The range/4 is:"
-  print (range samples / 4)
+  putStrLn $ "The range/4 is: " <> show (range samples / 4)
  
 
 

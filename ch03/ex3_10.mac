@@ -1,0 +1,12 @@
+/* chapter 3 example 3.10 */
+
+/* Define our target function: */
+f(p):=6*log(p)+14*log(1-p);
+
+/* Consider its extrema, which indeed is an maxima: */
+define(g(p),diff(f(p),p,1));
+solve(g(p),p);
+
+/* Hence, we have, at p=3/10, the maximum value of f: */
+plot2d([f(p),g(p),[parametric,3/10,y,[y,-50,10]]],[p,0,1],[y,-50,10]);
+plot2d([f(p),g(p),[parametric,3/10,y,[y,-50,10]]],[p,0,1],[y,-50,10], [png_file, "./ex3_10.png"]);

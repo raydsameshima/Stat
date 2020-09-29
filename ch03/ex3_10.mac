@@ -9,4 +9,4 @@ solve(g(p),p);
 
 /* Hence, we have, at p=3/10, the maximum value of f: */
 plot2d([f(p),g(p),[parametric,3/10,y,[y,-50,10]]],[p,0,1],[y,-50,10]);
-plot2d([f(p),g(p),[parametric,3/10,y,[y,-50,10]]],[p,0,1],[y,-50,10], [png_file, "./ex3_10.png"]);
+plot2d([f(p),g(p),[parametric,3/10,y,[y,-50,10]]],[p,0,1],[y,-50,10], [pdf_file, "./ex3_10.pdf"]);

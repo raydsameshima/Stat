@@ -29,8 +29,12 @@ Statistics.Distribution.Hypergeometric
 hypergeometric 
   :: Int                        -- m = r in the text, the number of red 
   -> Int                        -- l = N of the total population
-  -> Int                        -- k = y of a particular random variable
+  -> Int                        -- k = n of the sample size
   -> HypergeometricDistribution
+
+cumulative 
+  h -- :: HypergeometricDistribution
+  x -- :: y = x of a random variable
 
 ```
 

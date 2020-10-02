@@ -4,7 +4,11 @@ import Data.Monoid ((<>))
 import qualified Data.Vector as V
 
 import Statistics.Sample.Histogram (histogram)
-import Statistics.Sample (mean, varianceUnbiased, stdDev, range)
+import Statistics.Sample as S (mean, stdDev, range)
+
+import Statistics.Distribution
+import Statistics.Distribution.Normal
+import Statistics.Distribution.Binomial
 
 -- Average wind speeds for 45 us cities:
 samples :: V.Vector Double
@@ -26,8 +30,8 @@ main = do
   putStrLn $ "The lower bounds: " <> show lowerBs
   putStrLn $ "The histogram: " <> show hs
 
-  let av = mean samples
-      sd = stdDev samples
+  let av = S.mean samples
+      sd = S.stdDev samples
   putStrLn $ "The average value is: " <> show av <> " and the standard deviation is: " <> show sd
 
   let f k =
@@ -37,5 +41,5 @@ main = do
   putStrLn $ "Within two sigma:   " <> show (f 2)
   putStrLn $ "Within three sigma: " <> show (f 3)
 
-  putStrLn $ "range/4 is:           " <> show (range samples / 4) 
+  putStrLn $ "range/4 is:           " <> show (S.range samples / 4) 
   putStrLn $ "The average value is: " <> show av

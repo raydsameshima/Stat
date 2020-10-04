@@ -5,7 +5,6 @@ import qualified Data.Vector as V
 import Statistics.Sample
 import Statistics.Sample.Histogram (histogram)
 
-
 dice :: V.Vector Double
 dice = V.fromList [1,2,3,4,5,6]
 

@@ -22,6 +22,15 @@ counts the number of element within k-sigma (k=1,2,3 ..), where samples is a vec
 ### Ch.2
 
 ### Ch.3
+For a discrete distribution, use 
+
+```haskell
+
+probability :: d -> Int -> Double
+
+```
+
+
 Statistics.Distribution.Hypergeometric
 
 ```haskell
@@ -39,3 +48,10 @@ cumulative
 ```
 
 
+Discrete Distribution | probability | c(omplC)umulative 
+----------------------|-------------|------------------
+Binomial
+Geometric
+Hypergeometric
+Poisson
+Negative binomial

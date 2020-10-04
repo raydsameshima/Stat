@@ -10,9 +10,8 @@ h = hypergeometric m l k
     l = 20 -- N of population size
     k =  5 -- n of samplie size
 
--- Since cumulative is P(X <= x):
-p :: Double -> Double
-p k = cumulative h k - cumulative h (k-1)
+p :: Int -> Double
+p = probability h
 
 main :: IO ()
 main = do

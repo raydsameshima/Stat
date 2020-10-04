@@ -7,7 +7,6 @@ import Statistics.Distribution.Poisson
 pd :: PoissonDistribution
 pd = poisson 1.0
 
--- p y return the probability P(y-1 < X <= y), hence P(X = y): 
 p :: Double -> Double
 p y = cumulative pd y - cumulative pd (y-1)
 

@@ -7,9 +7,8 @@ import Statistics.Distribution.Poisson
 pd :: PoissonDistribution
 pd = poisson 6.0
 
--- p y return the probability P(y-1 < X <= y), hence P(X = y): 
-p :: Double -> Double
-p y = cumulative pd y - cumulative pd (y-1)
+p :: Int -> Double
+p = probability pd 
 
 main = do
   putStrLn $ "the mean =   " ++ show (mean pd)

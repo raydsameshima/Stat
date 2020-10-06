@@ -1,0 +1,29 @@
+/* theorem 3.10 */
+
+load(simplify_sum)$
+
+"sample size n << population N"$
+declare(n,integer, N,integer, r, integer)$
+assume( n < N )$
+assume( 0 <= r and r <= N and n < r )$
+/* unfortunately, the following assumption does not ignite */
+assume( n < N-r)$
+
+assume( n < N-r+1)$
+
+norm: sum(binomial(r,i)*binomial(N-r,n-i),i,0,n)$
+/* def. 3.10 */
+simplify_sum(norm);
+
+assume(0 <= y and y <= n);
+assume(y <= r and n-y <= N-r);
+
+mean:sum((y*binomial(r,y)*binomial(N-r,n-y))/binomial(N,n),y,0,n)$
+
+mean0: ev( makegamma(simplify_sum(mean)), gamma_expand:ture);
+
+var: sum( y^2*binomial(r,y)*binomial(N-r,n-y)/binomial(N,n),y,0,n)- mean0^2$
+factor(radcan(ev( makegamma(simplify_sum( var )), gamma_expand:true )));
+
+
+

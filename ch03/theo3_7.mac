@@ -1,0 +1,16 @@
+/* theorem 3.7 direct derivation */
+
+load(simplify_sum);
+
+assume(0 < p and p < 1)$
+mean:sum(y*binomial(n,y)*p^y*(1-p)^(n-y),y,0,inf)$
+
+"Let me try the default strategy:"$
+ev(mean, simpsum:true);
+
+"A more powerful function is the following:"$
+s_mean: simplify_sum(mean);
+
+var:sum((y-s_mean)^2*binomial(n,y)*p^y*(1-p)^(n-y),y,0,inf);
+ev(var,simpsum:true);
+factor( simplify_sum(var) );

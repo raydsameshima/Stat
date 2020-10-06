@@ -1,15 +1,15 @@
 /* https://maxima-discuss.narkive.com/RI3lKgn6/geometric-series */
 
-load(simplify_sum);
+load(simplify_sum)$
 "Theorem 3.8; if Y is a random variable with a geometric distribution, consider the mean and s.d."$
 
-assume(0 < p and p < 1);
-mean: sum( y*(1-p)^(y-1)*p, y,1,inf);
+assume(0 < p and p < 1)$
+mean: sum( y*(1-p)^(y-1)*p, y,1,inf)$
 
-escribe("simpsum",exact);
+escribe("simpsum", exact);
 ev(mean, simpsum:true);
 
-describe("simplify_sum",exact);
+describe("simplify_sum", exact);
 mean0: simplify_sum(mean);
 
 sd: sum( y^2*(1-p)^(y-1)*p,y,1,inf) - mean0^2;

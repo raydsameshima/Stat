@@ -7,8 +7,8 @@ import Statistics.Distribution.Poisson
 pd :: PoissonDistribution
 pd = poisson 1.0
 
-p :: Double -> Double
-p y = cumulative pd y - cumulative pd (y-1)
+p :: Int -> Double
+p = probability pd
 
 main = do
   putStrLn $ "the patrol will miss during the 0th period: " ++ show (p 0)

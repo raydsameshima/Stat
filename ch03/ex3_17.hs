@@ -17,6 +17,8 @@ main :: IO ()
 main = do
   putStrLn $ "p2 + p3 + p3 = " ++ show (p 2 + p 3 + p 4)
   putStrLn $ "1 - p0 - p1 =  " ++ show (1 - p 0 - p 1)
+  putStrLn $ "1 - P(X<=1) =  " ++ show (complCumulative h 1)
+  
   putStrLn $ "Indeed p0 and p1 are: " ++ show (p 0) ++ " and " ++ show (p 1)
   putStrLn $ "The mean = " ++ show (mean h) ++ " variance = " ++ show (variance h) 
           ++ " and stdDev = " ++ show (stdDev h) 

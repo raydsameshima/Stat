@@ -5,7 +5,7 @@ Some statistics memo written in math, Haskell, and Maxima.
 * Mathematical Statistics with Applications (7th Edition)
   (Wackerly, Mendenhall, Scheaffer)
 
-* (https://hackage.haskell.org/package/statistics-0.15.2.0)[https://hackage.haskell.org/package/statistics-0.15.2.0]
+* [statistics-0.15.2.0](https://hackage.haskell.org/package/statistics-0.15.2.0)
 
 ## Chapter Memo
 

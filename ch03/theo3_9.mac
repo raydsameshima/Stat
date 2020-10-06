@@ -1,0 +1,12 @@
+/* theorem 3.9 */
+
+load(simplify_sum)$
+assume(0<p and p<1 and 1 < r)$
+
+mean:sum(y*binomial(y-1,r-1)*p^r*(1-p)^(y-r),y,r,inf)$
+ev(mean,simpsum:true);
+mean0: simplify_sum(mean);
+
+var: sum((y-mean0)^2*binomial(y-1,r-1)*p^r*(1-p)^(y-r),y,r,inf)$
+simplify_sum( var );
+

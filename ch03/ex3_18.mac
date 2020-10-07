@@ -1,4 +1,6 @@
+/* ex 3.18 */
 load(simplify_sum);
 ev(sum((l^y/y!)*exp(-l),y,0,inf),simpsum:true);
 simplify_sum(%);
+
 

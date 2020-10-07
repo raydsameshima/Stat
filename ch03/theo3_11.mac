@@ -1,0 +1,11 @@
+/* theorem 3.11 */
+load(simplify_sum)$
+
+assume(l>0)$
+declare(y,integer)$
+p(y) := l^y*exp(-l)/y!;
+
+ev( sum(y*p(y),y,0,inf),simpsum:true);
+mean: simplify_sum(%);
+
+var: simplify_sum( ev( sum(y^2*p(y),y,0,inf), simpsum:true) - mean^2);

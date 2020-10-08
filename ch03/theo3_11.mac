@@ -1,5 +1,6 @@
 /* theorem 3.11 */
-"Theorem 3.11 page 134"$
+
+"Theorem 3.11 page 134: mean and variance of Possion distribution"$
 load(simplify_sum)$
 
 assume(l>0)$

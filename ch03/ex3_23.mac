@@ -1,6 +1,6 @@
 /* example 3.23 */
 
-"example 3.23"$
+"example 3.23: the moment-generating function of Poisson random variable with mean l"$
 batch("theo3_11.mac")$
 
 m(t):=sum(exp(t*y)*p(y),y,0,inf)$

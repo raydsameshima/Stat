@@ -1,6 +1,6 @@
 /* example 3.24 */
 
-"example 3.24"$
+"example 3.24: the moment-generating function of Poisson random variable, mean and variance"$
 batch("ex3_23.mac")$
 
 mean: subst([t=0], diff(m(t),t));

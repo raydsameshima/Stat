@@ -1,4 +1,5 @@
 /* theorem 3.11 */
+"Theorem 3.11 page 134"$
 load(simplify_sum)$
 
 assume(l>0)$

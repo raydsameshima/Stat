@@ -20,9 +20,9 @@ f k = V.length . V.filter (\x -> (av-k*sd)<x && x< (av+k*sd)) $ samples
 ```
 counts the number of element within k-sigma (k=1,2,3 ..), where samples is a vector of numerical data.
 
-### Ch.2
+### Ch.2 Probability
 
-### Ch.3
+### Ch.3 Discrete Random Variables and Their Probability Distributions
 For a discrete distribution, use 
 
 ```haskell

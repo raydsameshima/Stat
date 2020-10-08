@@ -48,11 +48,16 @@ cumulative
 
 ```
 
+A powerful simplification can be provided by loading:
+
+```maxima
+load(simplify_sum)$
+```
 
 Discrete Distribution | Examples and Theorems 
 ----------------------|----------------------
-Binomial
+Binomial              | ex3_21.hs
 Geometric
 Hypergeometric
-Poisson               | ex3_23.mac ex3_24.mac theo3_11.mac
+Poisson               | theo3_11.mac ex3_18.mac ex3_20.hs ex3_21.hs ex3_23.mac ex3_24.mac
 Negative binomial

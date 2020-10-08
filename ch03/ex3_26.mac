@@ -1,0 +1,9 @@
+"Example 3.26: probability-generating function for a geometric randome variable"$
+load(simplify_sum);
+
+assume(0 < p and p < 1)$
+assume(0 < t and (1-p)*t < 1)$
+
+P(t):=sum(t^y*(1-p)^(y-1)*p,y,1,inf)$
+define(P(t), ratsimp( simplify_sum(P(t)) ));
+

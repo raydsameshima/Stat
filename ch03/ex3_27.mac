@@ -1,0 +1,4 @@
+batch("ex3_26.mac")$
+
+subst([t = 1],diff(P(t),t,1));
+expand(%);

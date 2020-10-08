@@ -1,0 +1,10 @@
+/* example 3.24 */
+
+"example 3.24"$
+batch("ex3_23.mac")$
+
+mean: subst([t=0], diff(m(t),t));
+var_: subst([t=0], diff(m(t),t,2));
+
+var: ev(var_ - mean^2, expand);
+

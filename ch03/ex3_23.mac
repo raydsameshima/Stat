@@ -1,0 +1,8 @@
+/* example 3.23 */
+
+"example 3.23"$
+batch("theo3_11.mac")$
+
+m(t):=sum(exp(t*y)*p(y),y,0,inf)$
+simplify_sum(m(t));
+define(m(t), radcan(%));

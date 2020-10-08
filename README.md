@@ -49,10 +49,10 @@ cumulative
 ```
 
 
-Discrete Distribution | probability | c(omplC)umulative 
-----------------------|-------------|------------------
+Discrete Distribution | Examples and Theorems 
+----------------------|----------------------
 Binomial
 Geometric
 Hypergeometric
-Poisson
+Poisson               | ex3_23.mac ex3_24.mac theo3_11.mac
 Negative binomial

@@ -1,0 +1,11 @@
+"Theorem 4.11 beta distribution"$
+assume(0 <= y and y <= 1)$
+assume(a > 0 and b > 0)$
+f(y):=(y^(a-1)*(1-y)^(b-1))/beta(a,b)$
+
+integrate(f(y),y,0,1);
+mean: ev( makegamma(integrate(y*f(y),y,0,1)), gamma_expand:true );
+var: integrate((y-a/(a+b))^2*f(y),y,0,1)$
+ev(makegamma(%),gamma_expand:true)$
+expand(%)$
+factor(%);

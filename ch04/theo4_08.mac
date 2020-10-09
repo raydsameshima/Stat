@@ -1,0 +1,10 @@
+"Theorem 4.8 gamma distribution:"$
+
+declare(a,real,b,real)$
+assume(a > 0 and b > 0)$
+assume(y > 0)$
+f(y):=(y^(a-1)*exp((-y)/b))/(b^a*gamma(a))$
+
+mean: ev( integrate(y*f(y),y,0,inf), gamma_expand:true);
+
+var: ev( integrate((y-a*b)^2*f(y),y,0,inf), gamma_expand:true);

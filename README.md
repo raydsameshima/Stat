@@ -61,3 +61,6 @@ Geometric             | ex3_11.hs theo3_8.mac
 Hypergeometric        | ex3_16.hs ex3_10.mac (ex3_10.pdf) ex3_17.hs
 Poisson               | theo3_11.mac ex3_18.mac ex3_20.hs ex3_21.hs ex3_23.mac ex3_24.mac
 Negative binomial     | theo3_9.mac (no .hs code)
+
+### Ch.4
+

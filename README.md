@@ -28,7 +28,16 @@ counts the number of element within k-sigma (k=1,2,3 ..), where samples is a vec
 1. sum. rule (for mutually disjoint events)
 
 #### conditional probability
-P(A|B) := P(A ∩ B)/P(B), if P(B)>0
+P(A|B) := P(A ∩ B)/P(B), if P(B)>0,
+where the right hand side is read "probability of A given B."
+
+#### independent events
+Two events A and B are independent iff:
+
+1. P(A|B) = P(A)
+1. P(B|A) = P(B)
+1. P(A ∩ B) = P(A)P(B)
+
 
 ### Ch.3 Discrete Random Variables and Their Probability Distributions
 For a discrete distribution, use 

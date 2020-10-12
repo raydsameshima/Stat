@@ -22,6 +22,11 @@ counts the number of element within k-sigma (k=1,2,3 ..), where samples is a vec
 
 ### Ch.2 Probability
 
+#### axioms
+1. non-negative definite
+1. normalized
+1. sum. rule (for mutually disjoint events)
+
 ### Ch.3 Discrete Random Variables and Their Probability Distributions
 For a discrete distribution, use 
 

@@ -1,6 +1,8 @@
 -- ch1 figure 1.1
 -- https://stackoverflow.com/a/48212667 
 
+import Statistics.Sample
+
 import qualified Statistics.Sample.Histogram as S
 import qualified Data.Vector as V
 
@@ -21,8 +23,11 @@ hs = S.histogram_ bins lowerBound upperBound vs
 
 main :: IO ()
 main = do
-   putStrLn $ "Let us show the histgram, which corresponds to Figure1.1:"
+   putStrLn "Let us show the histgram, which corresponds to Figure1.1:"
    putStrLn $ "The date is:           " ++ show vs
    putStrLn $ "The number of smple is " ++ show (V.length vs)
    putStrLn $ "The histogram is:      " ++ show hs
 
+   let m = mean vs
+       s = stdDev vs
+   putStrLn $ "The mean is: " ++ show m ++ " and the standard deviation is: " ++ show s

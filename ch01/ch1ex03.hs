@@ -26,10 +26,6 @@ main = do
 
   let av = mean samples
       sd = stdDev samples
-  putStrLn $ "The average value is: " ++ show av <> "and the standard deviation is: " ++ show sd
+  putStrLn $ "The average value is: " ++ show av ++ "and the standard deviation is: " ++ show sd
 
   putStrLn $ "The range/4 is: " ++ show (range samples / 4)
- 
-
-
-

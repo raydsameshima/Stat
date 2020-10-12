@@ -22,15 +22,6 @@ counts the number of element within k-sigma (k=1,2,3 ..), where samples is a vec
 
 ### Ch.2 Probability
 
-#### Probability (axioms)
-1. $$ P\left( A \subset S \right) \geq 0 $$
-1. $$ P\left( S \right) = 1 $$
-1. For disjoint $$A_i, i \in I$, $P \left( \bigcup_{i \in I} A_i \right) = \sum_{i \in I} P\left( A_i \right)$$
-
-$$
-P \left( A \middle| B \right) := \frac{ P\left( A \cap B \right) }{ P\left(B \right) }
-$$
-
 ### Ch.3 Discrete Random Variables and Their Probability Distributions
 For a discrete distribution, use 
 

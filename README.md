@@ -27,6 +27,9 @@ counts the number of element within k-sigma (k=1,2,3 ..), where samples is a vec
 1. normalized
 1. sum. rule (for mutually disjoint events)
 
+#### conditional probability
+P(A|B) := P(A ∩ B)/P(B), if P(B)>0
+
 ### Ch.3 Discrete Random Variables and Their Probability Distributions
 For a discrete distribution, use 
 

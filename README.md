@@ -38,6 +38,9 @@ Two events A and B are independent iff:
 1. P(B|A) = P(B)
 1. P(A ∩ B) = P(A)P(B)
 
+#### Bayes' Rule
+
+
 
 ### Ch.3 Discrete Random Variables and Their Probability Distributions
 For a discrete distribution, use 

@@ -82,5 +82,17 @@ Hypergeometric        | ex3_16.hs ex3_10.mac (ex3_10.pdf) ex3_17.hs
 Poisson               | theo3_11.mac ex3_18.mac ex3_20.hs ex3_21.hs ex3_23.mac ex3_24.mac
 Negative binomial     | theo3_9.mac (no .hs code)
 
-### Ch.4
+### Ch.4 Continuous Variables and Their Probability Distributions
 
+Continuous Distribution | TBA
+------------------------| ---
+Uniform                 | 
+Normal                  | 
+Gamma                   | 
+Beta                    | 
+
+#### Tchebycheff's Theorem
+
+
+
+### Ch.5 Multivariate Probability Distributions
